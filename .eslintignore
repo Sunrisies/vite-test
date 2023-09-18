@@ -6,3 +6,4 @@ dist
 /public
 .eslintrc.js
 src/assets
+.vite.config.ts

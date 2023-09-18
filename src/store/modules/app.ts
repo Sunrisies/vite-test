@@ -1,4 +1,4 @@
-// import { AppState } from '@/types/store/app'
+// import { AppState } from '@/types/store/api'
 import { localStorage } from '@/utils/storage'
 import { defineStore } from 'pinia'
 

@@ -1,12 +1,12 @@
 import request from '@/utils/request'
 
-// export function login (data) {
-//   return request({
-//     url: '/user/login',
-//     method: 'post',
-//     data
-//   })
-// }
+export const login = (data: object) => {
+  return request({
+    url: '/login/register/login',
+    method: 'post',
+    data
+  })
+}
 
 // export function getInfo (token) {
 //   return request({

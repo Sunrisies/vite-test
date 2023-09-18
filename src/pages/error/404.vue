@@ -45,7 +45,7 @@ import useStore from '@/store'
 
 const { app } = useStore()
 console.log(app, 'ssss')
-// const name = ref(app.name)
+// const name = ref(api.name)
 // 响应式
 const { name: name } = storeToRefs(app)
 

@@ -27,6 +27,18 @@ export default defineConfig({
 
   server: {
     open: true,
-    port: 9080
+    host: '0.0.0.0',
+    port: 9999,
+    proxy: {
+      '/api': {
+        target: 'http://47.95.8.126:8082/',
+        ws: true,
+        changeOrigin: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
+        // pathRewrite: {
+        //   '^/api': ''
+        // }
+      }
+    }
   }
 })
