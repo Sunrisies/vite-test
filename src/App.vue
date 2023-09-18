@@ -1,23 +1,20 @@
-<script setup lang="ts">
-import { login } from '@/api/index'
-
-login({
-  userName: 'hongwan',
-  passWord:
-    'PIv/32We9iKqAIqRQfHq//mdgUAiGRouFuisIto1xef43tM8HgfQ8MoQ3YDn0j/Tpv/6kyurgxQu//0Gakx75y8AtC8FGFzSJ9pVdMx8kZ+hnGPqw7IBedHT5LhAG2RjkJlAnyLZVb5fRWcT60xlazDoFBnbUWyh5UqRtwjhd70='
-})
-</script>
-
 <template>
   <div class="content">
-    <el-button>demo</el-button>
-    <div>213123</div>
-    <router-view></router-view>
+    <h1>{{ title }}</h1>
+    <div class=""></div>
+    <div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
 </template>
-
+<script setup lang="ts">
+const title = ref('鸟类检测识别系统 V1.0')
+</script>
 <style lang="less" scoped>
 .content {
   border: 1px solid red;
+  width: 100%;
+  height: 100vh;
 }
 </style>
