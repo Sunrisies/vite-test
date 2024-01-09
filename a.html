@@ -1,0 +1,29 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>WebRTC Camera Demo</title>  
+</head>  
+<body>  
+  <a href="https://hwwp.top/hong-boot/mobile/play/hwks3685678">2131</a>
+<video id="videoElement" src="https://hwwp.top/hong-boot/mobile/play/hwks3685678" autoplay></video>  
+  
+<script>  
+    // 获取视频元素  
+    const videoElement = document.getElementById('videoElement');  
+  
+    // 请求获取摄像头权限  
+    navigator.mediaDevices.getUserMedia({ video: true })  
+        .then(function(stream) {  
+            // 将媒体流设置为视频元素的源  
+            console.log(stream)
+            // videoElement.srcObject = stream;  
+        })  
+        .catch(function(err) {  
+            console.log('无法访问摄像头：' + err.name);  
+        });  
+</script>  
+  
+</body>  
+</html>

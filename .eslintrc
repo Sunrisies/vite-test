@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser", //定义ESLint的解析器
+  "env": {
+    //指定代码的运行环境
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+//    "prettier/@typescript-eslint", // 使@typescript-eslint中的样式规范失效，遵循prettier中的样式规范
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended" // 使用prettier中的样式规范，且如果使ESLint会检测prettier的格式问题，同样将格式问题以error的形式抛出
+
+  ],
+  "settings": {},
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "parser": "@typescript-eslint/parser", //定义ESLint的解析器
+    "ecmaFeatures": {
+      "jsx": true,
+    }
+  },
+  "rules": {  
+    "prettier/prettier": "off" ,
+    "@typescript-eslint/no-explicit-any": ["off"] 
+  }  
+}

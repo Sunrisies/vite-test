@@ -1,0 +1,9 @@
+node_modules
+*.md
+.vscode
+.idea
+dist
+/public
+.eslintrc.js
+src/assets
+.vite.config.ts

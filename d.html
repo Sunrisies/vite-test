@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <style type="text/css">
+    .wrap{perspective:800px;}
+    .rotateBox{transform-style:preserve-3d; position: relative;width: 200px;height:130px;margin:200px auto;transition:transform 1s;}
+    .rotateBox img{position:absolute;bottom: 0;box-shadow: 0 0 8px rgba(0,0,0,0.3);border:1px solid #fff;border-radius:5px;}
+    </style>
+    <script type="text/javascript">
+    (function($, window, document, undefined){
+        $.fn.rotateFn = function(){
+            var pic = this.find('img'),
+                num = 8,
+                iw = pic.eq(0).width(),
+                deg = parseInt(360/num),
+                tz = iw / 2 / Math.tan(deg / 2 / 180 * Math.PI)+5,
+                d = 70;
+            pic.each(function(idx){
+                $(this).css('transform','rotateY('+idx*deg+'deg) translateZ('+tz+'px)');
+            });
+            this.bind('click',function(){
+                d += deg;
+                $(this).find('.rotateBox').css('transform','rotateY('+d+'deg)');
+            })
+        }
+    }(jQuery, window, document))
+
+    $(function(){
+        $('#rotateImg').rotateFn();
+    })
+    </script>
+</head>
+<body>
+    <div id="rotateImg" class="wrap">
+        <div class="rotateBox">
+            <img src="./src/assets/bj.jpg" width="200">
+            <img src="./src/assets/bj.jpg" width="200">
+            <img src="./src/assets/bj.jpg" width="200">
+            <img src="./src/assets/bj.jpg" width="200">
+        </div>
+    </div>
+</body>
+</html>
